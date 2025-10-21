@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4935ba9b-a91b-4fb5-a76f-a574d16667d4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api_client_get_document.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_client_get_user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_client_issue_physical_card.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clients/http/gateway/client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/http/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/http/client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/http/gateway/account/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/http/gateway/account/client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/http/gateway/cards/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/http/gateway/cards/client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/http/gateway/documents/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/http/gateway/documents/client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/http/gateway/operations/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/http/gateway/operations/client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/http/gateway/users/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/http/gateway/users/client.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +49,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sasha\PycharmProjects\performance-tests" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -77,7 +72,7 @@
       <updated>1760942668590</updated>
       <workItem from="1760942669699" duration="15987000" />
       <workItem from="1760969005976" duration="4030000" />
-      <workItem from="1761022083443" duration="13046000" />
+      <workItem from="1761022083443" duration="13367000" />
     </task>
     <servers />
   </component>
