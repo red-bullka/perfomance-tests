@@ -1,6 +1,6 @@
 from typing import TypedDict
 from httpx import Response
-from clients.http.client import HttpClient
+from clients.http.client import HTTPClient
 from clients.http.gateway.client import build_gateway_http_client
 
 
@@ -20,7 +20,7 @@ class GetContractDocumentResponseDict(TypedDict):
     contract: DocumentDict
 
 
-class DocumentsGatewayHTTPClient(HttpClient):
+class DocumentsGatewayHTTPClient(HTTPClient):
     """
     Клиент для взаимодействия с /api/v1/documents сервиса http-gateway.
     Содержит низкоуровневые *_api и высокоуровневые методы, возвращающие уже распарсенный JSON.

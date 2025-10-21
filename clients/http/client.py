@@ -1,10 +1,12 @@
 from httpx import Client, URL, QueryParams, Response
 from typing import Any
+
+
 class HttpClient:
     def __init__(self, client: Client):
         self.client = client
 
-    def get(self, url: URL | str, params: QueryParams | None = None ) -> Response:
+    def get(self, url: URL | str, params: QueryParams | None = None) -> Response:
         self.client.get(url, params=params)
         return self.client.get(url, params=params)
 
