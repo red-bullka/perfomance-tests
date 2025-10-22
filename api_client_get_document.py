@@ -1,64 +1,25 @@
-from typing import TypedDict
-from httpx import Response
-from clients.http.client import HTTPClient
-from clients.http.gateway.client import build_gateway_http_client
+from clients.http.gateway.account.client import build_accounts_gateway_http_client
+from clients.http.gateway.documents.client import build_documents_gateway_http_client
+from clients.http.gateway.users.client import build_users_gateway_http_client
 
+users_gateway_client = build_users_gateway_http_client()
+accounts_gateway_client = build_accounts_gateway_http_client()
+documents_gateway_client = build_documents_gateway_http_client()
 
-class DocumentDict(TypedDict):
-    """Универсальная структура документа (тариф/контракт)."""
-    url: str
-    document: str
+create_user_response = users_gateway_client.create_user()
+print('Create user response:', create_user_response)
 
+open_credit_card_account_response = accounts_gateway_client.open_credit_card_account(
+    user_id=create_user_response.user.id
+)
+print('Open credit card account response:', open_credit_card_account_response)
 
-class GetTariffDocumentResponseDict(TypedDict):
-    """Структура ответа на запрос тарифа по счёту."""
-    tariff: DocumentDict
+get_tariff_document_response = documents_gateway_client.get_tariff_document(
+    account_id=open_credit_card_account_response.account.id
+)
+print('Get tariff document response:', get_tariff_document_response)
 
-
-class GetContractDocumentResponseDict(TypedDict):
-    """Структура ответа на запрос контракта по счёту."""
-    contract: DocumentDict
-
-
-class DocumentsGatewayHTTPClient(HTTPClient):
-    """
-    Клиент для взаимодействия с /api/v1/documents сервиса http-gateway.
-    Содержит низкоуровневые *_api и высокоуровневые методы, возвращающие уже распарсенный JSON.
-    """
-
-    # ---------- НИЗКОУРОВНЕВЫЕ МЕТОДЫ (возвращают httpx.Response) ----------
-
-    def get_tariff_document_api(self, account_id: str) -> Response:
-        """GET /api/v1/documents/tariff-document/{account_id} — получить тариф по счёту."""
-        return self.get(f"/api/v1/documents/tariff-document/{account_id}")
-
-    def get_contract_document_api(self, account_id: str) -> Response:
-        """GET /api/v1/documents/contract-document/{account_id} — получить контракт по счёту."""
-        return self.get(f"/api/v1/documents/contract-document/{account_id}")
-
-    # ---------- ВЫСОКУРОВНЕВЫЕ МЕТОДЫ (возвращают TypedDict) ----------
-
-    def get_tariff_document(self, account_id: str) -> GetTariffDocumentResponseDict:
-        """
-        Выполняет запрос тарифа и возвращает распарсенный JSON-ответ.
-        :param account_id: Идентификатор счёта.
-        :return: Словарь вида {'tariff': {'url': ..., 'document': ...}}
-        """
-        response = self.get_tariff_document_api(account_id)
-        return response.json()
-
-    def get_contract_document(self, account_id: str) -> GetContractDocumentResponseDict:
-        """
-        Выполняет запрос контракта и возвращает распарсенный JSON-ответ.
-        :param account_id: Идентификатор счёта.
-        :return: Словарь вида {'contract': {'url': ..., 'document': ...}}
-        """
-        response = self.get_contract_document_api(account_id)
-        return response.json()
-
-
-def build_documents_gateway_http_client() -> DocumentsGatewayHTTPClient:
-    """
-    Возвращает готовый к использованию DocumentsGatewayHTTPClient, сконфигурированный билдером gateway.
-    """
-    return DocumentsGatewayHTTPClient(client=build_gateway_http_client())
+get_contract_document_response = documents_gateway_client.get_contract_document(
+    account_id=open_credit_card_account_response.account.id
+)
+print('Get contract document response:', get_contract_document_response)
