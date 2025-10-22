@@ -1,32 +1,17 @@
-from typing import TypedDict
 from httpx import Response
+
 from clients.http.client import HttpClient
 from clients.http.gateway.client import build_gateway_http_client
-
-
-class DocumentDict(TypedDict):
-    """Универсальная структура документа (тариф/контракт)."""
-    url: str
-    document: str
-
-
-class GetTariffDocumentResponseDict(TypedDict):
-    """Структура ответа на запрос тарифа по счёту."""
-    tariff: DocumentDict
-
-
-class GetContractDocumentResponseDict(TypedDict):
-    """Структура ответа на запрос контракта по счёту."""
-    contract: DocumentDict
+from clients.http.gateway.documents.schema import (
+    GetTariffDocumentResponseSchema,
+    GetContractDocumentResponseSchema
+)
 
 
 class DocumentsGatewayHTTPClient(HttpClient):
     """
     Клиент для взаимодействия с /api/v1/documents сервиса http-gateway.
-    Содержит низкоуровневые *_api и высокоуровневые методы, возвращающие уже распарсенный JSON.
     """
-
-    # ---------- НИЗКОУРОВНЕВЫЕ МЕТОДЫ (возвращают httpx.Response) ----------
 
     def get_tariff_document_api(self, account_id: str) -> Response:
         """GET /api/v1/documents/tariff-document/{account_id} — получить тариф по счёту."""
@@ -36,29 +21,27 @@ class DocumentsGatewayHTTPClient(HttpClient):
         """GET /api/v1/documents/contract-document/{account_id} — получить контракт по счёту."""
         return self.get(f"/api/v1/documents/contract-document/{account_id}")
 
-    # ---------- ВЫСОКУРОВНЕВЫЕ МЕТОДЫ (возвращают TypedDict) ----------
-
-    def get_tariff_document(self, account_id: str) -> GetTariffDocumentResponseDict:
+    def get_tariff_document(self, account_id: str) -> GetTariffDocumentResponseSchema:
         """
-        Выполняет запрос тарифа и возвращает распарсенный JSON-ответ.
+        Выполняет запрос тарифа и возвращает Pydantic-модель ответа.
         :param account_id: Идентификатор счёта.
-        :return: Словарь вида {'tariff': {'url': ..., 'document': ...}}
         """
         response = self.get_tariff_document_api(account_id)
-        return response.json()
+        # <<< ИЗМЕНЕНИЕ ЗДЕСЬ: заменяем response.json() на безопасный парсинг Pydantic
+        return GetTariffDocumentResponseSchema.model_validate_json(response.text)
 
-    def get_contract_document(self, account_id: str) -> GetContractDocumentResponseDict:
+    def get_contract_document(self, account_id: str) -> GetContractDocumentResponseSchema:
         """
-        Выполняет запрос контракта и возвращает распарсенный JSON-ответ.
+        Выполняет запрос контракта и возвращает Pydantic-модель ответа.
         :param account_id: Идентификатор счёта.
-        :return: Словарь вида {'contract': {'url': ..., 'document': ...}}
         """
         response = self.get_contract_document_api(account_id)
-        return response.json()
+        # <<< ИЗМЕНЕНИЕ ЗДЕСЬ: заменяем response.json() на безопасный парсинг Pydantic
+        return GetContractDocumentResponseSchema.model_validate_json(response.text)
 
 
 def build_documents_gateway_http_client() -> DocumentsGatewayHTTPClient:
     """
-    Возвращает готовый к использованию DocumentsGatewayHTTPClient, сконфигурированный билдером gateway.
+    Возвращает готовый к использованию DocumentsGatewayHTTPClient.
     """
     return DocumentsGatewayHTTPClient(client=build_gateway_http_client())
