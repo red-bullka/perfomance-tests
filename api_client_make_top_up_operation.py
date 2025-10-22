@@ -15,22 +15,18 @@ def main() -> None:
     accounts_client = build_accounts_gateway_http_client()
     operations_client = build_operations_gateway_http_client()
 
-    # 1) создаём пользователя
     create_user_resp = users_client.create_user()
     print("Create user response:", create_user_resp)
-    user_id = create_user_resp["user"]["id"]
+    user_id = create_user_resp.user.id
 
-    # 2) открываем дебетовый счёт
     open_debit_acc_resp = accounts_client.open_debit_card_account(user_id=user_id)
     print("Open debit card account response:", open_debit_acc_resp)
 
-    account = open_debit_acc_resp["account"]
-    account_id = account["id"]
+    account = open_debit_acc_resp.account
+    account_id = account.id
 
-    # возьмём первую карту из списка (обычно там уже есть VIRTUAL/PHYSICAL)
-    first_card_id = account["cards"][0]["id"]
+    first_card_id = account.cards[0].id
 
-    # 3) создаём операцию пополнения
     top_up_resp = operations_client.make_top_up_operation(
         card_id=first_card_id,
         account_id=account_id,
