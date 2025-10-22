@@ -3,7 +3,7 @@
 """
 from datetime import datetime
 from enum import StrEnum
-
+from tools.fakers import fake
 from pydantic import BaseModel, Field, HttpUrl, ConfigDict
 
 
@@ -26,8 +26,6 @@ class OperationType(StrEnum):
     CASH_WITHDRAWAL = "CASH_WITHDRAWAL"
     UNSPECIFIED = "UNSPECIFIED"
 
-
-# --- Модели данных (сущности) ---
 
 class OperationSchema(BaseModel):
     """Описание сущности операции."""
@@ -54,8 +52,6 @@ class OperationsSummarySchema(BaseModel):
     cashback_amount: float = Field(alias="cashbackAmount")
 
 
-# --- Модели запросов (Request) ---
-
 class GetOperationsQuerySchema(BaseModel):
     """Query-параметры для получения списка операций."""
     model_config = ConfigDict(populate_by_name=True)
@@ -65,18 +61,19 @@ class GetOperationsQuerySchema(BaseModel):
 class MakeOperationRequestSchema(BaseModel):
     """Базовое тело POST-запроса на создание операции."""
     model_config = ConfigDict(populate_by_name=True)
-    status: OperationStatus
-    amount: float
+
     card_id: str = Field(alias="cardId")
     account_id: str = Field(alias="accountId")
+
+    status: OperationStatus = Field(default_factory=lambda: fake.enum(OperationStatus))
+    amount: float = Field(default_factory=fake.amount)
 
 
 class MakePurchaseOperationRequestSchema(MakeOperationRequestSchema):
     """Тело POST-запроса на создание операции покупки (с категорией)."""
-    category: str
+    # Поле с автоматической генерацией данных
+    category: str = Field(default_factory=fake.category)
 
-
-# --- Модели ответов (Response) ---
 
 class GetOperationResponseSchema(BaseModel):
     operation: OperationSchema

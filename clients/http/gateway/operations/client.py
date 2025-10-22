@@ -101,7 +101,6 @@ class OperationsGatewayHTTPClient(HttpClient):
         return CreateOperationResponseSchema.model_validate_json(resp.text)
 
     def make_purchase_operation(self, card_id: str, account_id: str) -> CreateOperationResponseSchema:
-        # category генерируется автоматически в модели
         request = MakePurchaseOperationRequestSchema(card_id=card_id, account_id=account_id)
         resp = self.make_purchase_operation_api(request)
         return CreateOperationResponseSchema.model_validate_json(resp.text)
