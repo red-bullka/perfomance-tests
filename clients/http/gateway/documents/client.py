@@ -27,7 +27,6 @@ class DocumentsGatewayHTTPClient(HttpClient):
         :param account_id: Идентификатор счёта.
         """
         response = self.get_tariff_document_api(account_id)
-        # <<< ИЗМЕНЕНИЕ ЗДЕСЬ: заменяем response.json() на безопасный парсинг Pydantic
         return GetTariffDocumentResponseSchema.model_validate_json(response.text)
 
     def get_contract_document(self, account_id: str) -> GetContractDocumentResponseSchema:
@@ -36,7 +35,6 @@ class DocumentsGatewayHTTPClient(HttpClient):
         :param account_id: Идентификатор счёта.
         """
         response = self.get_contract_document_api(account_id)
-        # <<< ИЗМЕНЕНИЕ ЗДЕСЬ: заменяем response.json() на безопасный парсинг Pydantic
         return GetContractDocumentResponseSchema.model_validate_json(response.text)
 
 
