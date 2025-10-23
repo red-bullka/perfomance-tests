@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4935ba9b-a91b-4fb5-a76f-a574d16667d4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/greeting.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpc_client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpc_server.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_client_get_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_client_get_user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_client_issue_physical_card.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_client_issue_physical_card.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/http/gateway/operations/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/http/gateway/operations/client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/http/gateway/operations/schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/http/gateway/operations/schema.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +84,7 @@
       <workItem from="1760969005976" duration="4030000" />
       <workItem from="1761022083443" duration="23659000" />
       <workItem from="1761109632922" duration="26416000" />
-      <workItem from="1761199631792" duration="3910000" />
+      <workItem from="1761199631792" duration="9546000" />
     </task>
     <servers />
   </component>
