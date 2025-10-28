@@ -2,7 +2,7 @@ from locust import HttpUser, between, task
 from tools.fakers import fake
 
 
-class GetUserScenarioUser(HttpUser):
+class OpenDebitCardAccountScenarioUser(HttpUser):
     wait_time = between(1, 3)
     user_data: dict
 
@@ -20,8 +20,9 @@ class GetUserScenarioUser(HttpUser):
         self.user_data = response.json()
 
     @task
-    def get_user(self):
-        self.client.get(
-            f"/api/v1/users/{self.user_data['user']['id']}",
-            name="/api/v1/users{user_id}"
+    def open_debit_card_account(self):
+        self.client.post(
+            "/api/v1/accounts/open-debit-card-account",
+            json={"userId": self.user_data["user"]["id"]},
+            name="/api/v1/accounts/open-debit-card-account"
         )
