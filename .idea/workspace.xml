@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4935ba9b-a91b-4fb5-a76f-a574d16667d4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/grpc_api_client_make_top_up_operation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/locust_basic_scenario.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/locust_get_user_scenario.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tools/fakers.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/fakers.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,42 +33,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.api_client_get_document.executor": "Run",
-    "Python.api_client_get_user.executor": "Run",
-    "Python.api_client_issue_physical_card.executor": "Run",
-    "Python.api_client_make_top_up_operation.executor": "Run",
-    "Python.client.executor": "Run",
-    "Python.fakers.executor": "Run",
-    "Python.grpc_api_client_get_documents.executor": "Run",
-    "Python.grpc_api_client_get_user.executor": "Run",
-    "Python.grpc_api_client_issue_physical_card.executor": "Run",
-    "Python.grpc_api_client_make_top_up_operation.executor": "Run",
-    "Python.grpcio_get_documents.executor": "Run",
-    "Python.grpcio_get_operation_receipt.executor": "Run",
-    "Python.grpcio_get_user.executor": "Run",
-    "Python.grpcio_issue_physical_card.executor": "Run",
-    "Python.grpcio_make_purchase_operation.executor": "Run",
-    "Python.grpcio_open_debit_card_account.executor": "Run",
-    "Python.httpx_client.executor": "Run",
-    "Python.httpx_get_operation_receipt.executor": "Run",
-    "Python.primer.executor": "Run",
-    "Python.pydantic_basics.executor": "Run",
-    "Python.pydantic_create_user.executor": "Run",
-    "Python.pydantic_example.executor": "Run",
-    "Python.schema.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Sasha/PycharmProjects/performance-tests",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.api_client_get_document.executor&quot;: &quot;Run&quot;,
+    &quot;Python.api_client_get_user.executor&quot;: &quot;Run&quot;,
+    &quot;Python.api_client_issue_physical_card.executor&quot;: &quot;Run&quot;,
+    &quot;Python.api_client_make_top_up_operation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.client.executor&quot;: &quot;Run&quot;,
+    &quot;Python.fakers.executor&quot;: &quot;Run&quot;,
+    &quot;Python.grpc_api_client_get_documents.executor&quot;: &quot;Run&quot;,
+    &quot;Python.grpc_api_client_get_user.executor&quot;: &quot;Run&quot;,
+    &quot;Python.grpc_api_client_issue_physical_card.executor&quot;: &quot;Run&quot;,
+    &quot;Python.grpc_api_client_make_top_up_operation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.grpcio_get_documents.executor&quot;: &quot;Run&quot;,
+    &quot;Python.grpcio_get_operation_receipt.executor&quot;: &quot;Run&quot;,
+    &quot;Python.grpcio_get_user.executor&quot;: &quot;Run&quot;,
+    &quot;Python.grpcio_issue_physical_card.executor&quot;: &quot;Run&quot;,
+    &quot;Python.grpcio_make_purchase_operation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.grpcio_open_debit_card_account.executor&quot;: &quot;Run&quot;,
+    &quot;Python.httpx_client.executor&quot;: &quot;Run&quot;,
+    &quot;Python.httpx_get_operation_receipt.executor&quot;: &quot;Run&quot;,
+    &quot;Python.locust_basic_scenario.executor&quot;: &quot;Run&quot;,
+    &quot;Python.primer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pydantic_basics.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pydantic_create_user.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pydantic_example.executor&quot;: &quot;Run&quot;,
+    &quot;Python.schema.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sasha/PycharmProjects/performance-tests&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Sasha\PycharmProjects\performance-tests" />
@@ -99,7 +100,8 @@
       <workItem from="1761109632922" duration="26416000" />
       <workItem from="1761199631792" duration="21604000" />
       <workItem from="1761288063545" duration="10012000" />
-      <workItem from="1761546853934" duration="12435000" />
+      <workItem from="1761546853934" duration="17116000" />
+      <workItem from="1761635939264" duration="4941000" />
     </task>
     <servers />
   </component>
@@ -113,27 +115,28 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/performance_tests$fakers.coverage" NAME="fakers Coverage Results" MODIFIED="1761157187669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
-    <SUITE FILE_PATH="coverage/performance_tests$schema.coverage" NAME="schema Coverage Results" MODIFIED="1761160052274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/clients/http/gateway/operations" />
-    <SUITE FILE_PATH="coverage/performance_tests$grpcio_make_purchase_operation.coverage" NAME="grpcio_make_purchase_operation Coverage Results" MODIFIED="1761295136497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/performance_tests$pydantic_example.coverage" NAME="pydantic_example Coverage Results" MODIFIED="1761048699583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/performance_tests$client.coverage" NAME="client Coverage Results" MODIFIED="1761563316033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/clients/grpc/gateway/operations" />
     <SUITE FILE_PATH="coverage/performance_tests$httpx_client.coverage" NAME="httpx_client Coverage Results" MODIFIED="1760947458524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/performance_tests$httpx_get_operation_receipt.coverage" NAME="httpx_get_operation_receipt Coverage Results" MODIFIED="1760944157084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/performance_tests$pydantic_basics.coverage" NAME="pydantic_basics Coverage Results" MODIFIED="1761054835218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/performance_tests$grpc_api_client_make_top_up_operation.coverage" NAME="grpc_api_client_make_top_up_operation Coverage Results" MODIFIED="1761565559723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/performance_tests$grpcio_get_operation_receipt.coverage" NAME="grpcio_get_operation_receipt Coverage Results" MODIFIED="1761296411911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/performance_tests$grpc_api_client_get_documents.coverage" NAME="grpc_api_client_get_documents Coverage Results" MODIFIED="1761564896918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/performance_tests$api_client_get_document.coverage" NAME="api_client_get_document Coverage Results" MODIFIED="1761204588728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/performance_tests$grpcio_open_debit_card_account.coverage" NAME="grpcio_open_debit_card_account Coverage Results" MODIFIED="1761242005052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/performance_tests$api_client_make_top_up_operation.coverage" NAME="api_client_make_top_up_operation Coverage Results" MODIFIED="1761204426841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/performance_tests$grpc_api_client_get_user.coverage" NAME="grpc_api_client_get_user Coverage Results" MODIFIED="1761563638284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/performance_tests$grpcio_get_user.coverage" NAME="grpcio_get_user Coverage Results" MODIFIED="1761223050155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/performance_tests$primer.coverage" NAME="primer Coverage Results" MODIFIED="1761022305071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/performance_tests$grpcio_get_documents.coverage" NAME="grpcio_get_documents Coverage Results" MODIFIED="1761293307507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/performance_tests$pydantic_create_user.coverage" NAME="pydantic_create_user Coverage Results" MODIFIED="1761059433534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/performance_tests$api_client_issue_physical_card.coverage" NAME="api_client_issue_physical_card Coverage Results" MODIFIED="1761204574022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/performance_tests$grpcio_issue_physical_card.coverage" NAME="grpcio_issue_physical_card Coverage Results" MODIFIED="1761290324461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/performance_tests$api_client_get_user.coverage" NAME="api_client_get_user Coverage Results" MODIFIED="1761563533067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/performance_tests$grpc_api_client_issue_physical_card.coverage" NAME="grpc_api_client_issue_physical_card Coverage Results" MODIFIED="1761564689297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/performance_tests$schema.coverage" NAME="schema Coverage Results" MODIFIED="1761160052274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/clients/http/gateway/operations" />
+    <SUITE FILE_PATH="coverage/performance_tests$grpcio_make_purchase_operation.coverage" NAME="grpcio_make_purchase_operation Coverage Results" MODIFIED="1761295136497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/performance_tests$pydantic_example.coverage" NAME="pydantic_example Coverage Results" MODIFIED="1761048699583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/performance_tests$httpx_get_operation_receipt.coverage" NAME="httpx_get_operation_receipt Coverage Results" MODIFIED="1760944157084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/performance_tests$pydantic_basics.coverage" NAME="pydantic_basics Coverage Results" MODIFIED="1761054835218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/performance_tests$grpc_api_client_get_documents.coverage" NAME="grpc_api_client_get_documents Coverage Results" MODIFIED="1761564896918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/performance_tests$grpcio_open_debit_card_account.coverage" NAME="grpcio_open_debit_card_account Coverage Results" MODIFIED="1761242005052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/performance_tests$grpc_api_client_get_user.coverage" NAME="grpc_api_client_get_user Coverage Results" MODIFIED="1761563638284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/performance_tests$locust_basic_scenario.coverage" NAME="locust_basic_scenario Coverage Results" MODIFIED="1761584030068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/performance_tests$grpcio_get_documents.coverage" NAME="grpcio_get_documents Coverage Results" MODIFIED="1761293307507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/performance_tests$api_client_get_user.coverage" NAME="api_client_get_user Coverage Results" MODIFIED="1761563533067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
