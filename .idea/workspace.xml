@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4935ba9b-a91b-4fb5-a76f-a574d16667d4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/clients/http/event_hooks/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clients/http/event_hooks/locust_event_hook.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/http/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/http/client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clients/http/gateway/account/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/http/gateway/account/client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clients/http/gateway/cards/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/http/gateway/cards/client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/http/gateway/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/http/gateway/client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clients/http/gateway/documents/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/http/gateway/documents/client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clients/http/gateway/operations/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/http/gateway/operations/client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clients/http/gateway/users/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/http/gateway/users/client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locust_open_debit_card_account.py" beforeDir="false" afterPath="$PROJECT_DIR$/locust_open_debit_card_account.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +107,7 @@
       <workItem from="1761199631792" duration="21604000" />
       <workItem from="1761288063545" duration="10012000" />
       <workItem from="1761546853934" duration="17116000" />
-      <workItem from="1761635939264" duration="17550000" />
+      <workItem from="1761635939264" duration="19246000" />
     </task>
     <servers />
   </component>

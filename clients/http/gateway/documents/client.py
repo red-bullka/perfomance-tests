@@ -1,7 +1,11 @@
+from locust.env import Environment
 from httpx import Response
 
 from clients.http.client import HttpClient, HttpClientExtensions
-from clients.http.gateway.client import build_gateway_http_client
+from clients.http.gateway.client import (
+    build_gateway_http_client,
+    build_gateway_locust_http_client
+)
 from clients.http.gateway.documents.schema import (
     GetTariffDocumentResponseSchema,
     GetContractDocumentResponseSchema
@@ -49,3 +53,17 @@ def build_documents_gateway_http_client() -> DocumentsGatewayHTTPClient:
     Возвращает готовый к использованию DocumentsGatewayHTTPClient.
     """
     return DocumentsGatewayHTTPClient(client=build_gateway_http_client())
+
+
+def build_documents_gateway_locust_http_client(environment: Environment) -> DocumentsGatewayHTTPClient:
+    """
+        Функция создаёт экземпляр DocumentsGatewayHTTPClient,
+        адаптированный под нагрузочное тестирование с помощью Locust.
+
+        Клиент автоматически собирает метрики и передаёт их в Locust через хуки.
+        Используется исключительно в нагрузочных тестах.
+
+        :param environment: Объект окружения Locust.
+        :return: Экземпляр DocumentsGatewayHTTPClient с хуками сбора метрик.
+        """
+    return DocumentsGatewayHTTPClient(client=build_gateway_locust_http_client(environment))
