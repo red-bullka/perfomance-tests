@@ -1,6 +1,6 @@
 from httpx import Response, QueryParams
 
-from clients.http.client import HttpClient
+from clients.http.client import HttpClient, HttpClientExtensions
 from clients.http.gateway.client import build_gateway_http_client
 from clients.http.gateway.operations.schema import (
     GetOperationResponseSchema,
@@ -32,63 +32,71 @@ class OperationsGatewayHTTPClient(HttpClient):
     """
 
     def get_operation_api(self, operation_id: str) -> Response:
-        return self.get(f"/api/v1/operations/{operation_id}")
+        return self.get(
+            f"/api/v1/operations/{operation_id}",
+            extensions=HttpClientExtensions(route="/api/v1/operations/{operation_id}")
+        )
 
     def get_operation_receipt_api(self, operation_id: str) -> Response:
-        return self.get(f"/api/v1/operations/operation-receipt/{operation_id}")
+        return self.get(
+            f"/api/v1/operations/operation-receipt/{operation_id}",
+            extensions=HttpClientExtensions(route="/api/v1/operations/operation-receipt/{operation_id}")
+        )
 
     def get_operations_api(self, query: GetOperationsQuerySchema) -> Response:
         return self.get(
             "/api/v1/operations",
             params=QueryParams(**query.model_dump(by_alias=True)),
+            extensions=HttpClientExtensions(route="/api/v1/operations")
         )
 
     def get_operations_summary_api(self, query: GetOperationsSummaryQuerySchema) -> Response:
         return self.get(
             "/api/v1/operations/operations-summary",
             params=QueryParams(**query.model_dump(by_alias=True)),
+            extensions=HttpClientExtensions(route="/api/v1/operations/operations-summary")
         )
 
     def make_fee_operation_api(self, request: MakeFeeOperationRequestSchema) -> Response:
         return self.post(
             "/api/v1/operations/make-fee-operation",
-            json=request.model_dump(by_alias=True),
+            json=request.model_dump(by_alias=True)
         )
 
     def make_top_up_operation_api(self, request: MakeTopUpOperationRequestSchema) -> Response:
         return self.post(
             "/api/v1/operations/make-top-up-operation",
-            json=request.model_dump(by_alias=True),
+            json=request.model_dump(by_alias=True)
         )
 
     def make_cashback_operation_api(self, request: MakeCashbackOperationRequestSchema) -> Response:
         return self.post(
             "/api/v1/operations/make-cashback-operation",
-            json=request.model_dump(by_alias=True),
+            json=request.model_dump(by_alias=True)
         )
 
     def make_transfer_operation_api(self, request: MakeTransferOperationRequestSchema) -> Response:
         return self.post(
             "/api/v1/operations/make-transfer-operation",
-            json=request.model_dump(by_alias=True),
+            json=request.model_dump(by_alias=True)
         )
 
     def make_purchase_operation_api(self, request: MakePurchaseOperationRequestSchema) -> Response:
         return self.post(
             "/api/v1/operations/make-purchase-operation",
-            json=request.model_dump(by_alias=True),
+            json=request.model_dump(by_alias=True)
         )
 
     def make_bill_payment_operation_api(self, request: MakeBillPaymentOperationRequestSchema) -> Response:
         return self.post(
             "/api/v1/operations/make-bill-payment-operation",
-            json=request.model_dump(by_alias=True),
+            json=request.model_dump(by_alias=True)
         )
 
     def make_cash_withdrawal_operation_api(self, request: MakeCashWithdrawalOperationRequestSchema) -> Response:
         return self.post(
             "/api/v1/operations/make-cash-withdrawal-operation",
-            json=request.model_dump(by_alias=True),
+            json=request.model_dump(by_alias=True)
         )
 
     def get_operation(self, operation_id: str) -> GetOperationResponseSchema:

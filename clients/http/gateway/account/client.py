@@ -1,8 +1,7 @@
-from typing import TypedDict
-
+from locust.env import Environment
 from httpx import Response, QueryParams
 
-from clients.http.client import HttpClient
+from clients.http.client import HttpClient, HttpClientExtensions
 from clients.http.gateway.client import build_gateway_http_client
 from clients.http.gateway.account.schema import (
     GetAccountsQuerySchema,
@@ -30,7 +29,11 @@ class AccountsGatewayHTTPClient(HttpClient):
         :param query: Словарь с параметрами запроса, например: {'userId': '123'}.
         :return: Объект httpx.Response с данными о счетах.
         """
-        return self.get("/api/v1/accounts", params=QueryParams(**query.model_dump(by_alias=True)))
+        return self.get(
+            "/api/v1/accounts",
+            params=QueryParams(**query.model_dump(by_alias=True)),
+            extensions=HttpClientExtensions(route='/api/v1/accounts')
+        )
 
     def open_deposit_account_api(self, request: OpenDepositAccountRequestSchema) -> Response:
         """
@@ -106,3 +109,7 @@ def build_accounts_gateway_http_client() -> AccountsGatewayHTTPClient:
     :return: Готовый к использованию AccountsGatewayHTTPClient.
     """
     return AccountsGatewayHTTPClient(client=build_gateway_http_client())
+
+
+def build_accounts_gateway_locust_http_client(environment: Environment) -> AccountsGatewayHTTPClient:
+    return AccountsGatewayHTTPClient(client=build_accounts_gateway_locust_http_client(environment))

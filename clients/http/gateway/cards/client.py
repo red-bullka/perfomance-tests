@@ -1,4 +1,4 @@
-from typing import TypedDict
+from locust.env import Environment
 
 from httpx import Response
 
@@ -55,3 +55,7 @@ def build_cards_gateway_http_client() -> CardsGatewayHTTPClient:
     :return: Готовый к использованию CardsGatewayHTTPClient.
     """
     return CardsGatewayHTTPClient(client=build_gateway_http_client())
+
+
+def build_cards_gateway_locust_http_client(environment: Environment) -> CardsGatewayHTTPClient:
+    return CardsGatewayHTTPClient(client=build_cards_gateway_locust_http_client(environment))
