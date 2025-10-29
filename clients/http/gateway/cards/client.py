@@ -2,7 +2,7 @@ from locust.env import Environment
 
 from httpx import Response
 
-from clients.http.client import HttpClient
+from clients.http.client import HTTPClient
 from clients.http.gateway.client import build_gateway_http_client, build_gateway_locust_http_client
 from clients.http.gateway.cards.schema import (
     IssueVirtualCardRequestSchema,
@@ -12,7 +12,7 @@ from clients.http.gateway.cards.schema import (
 )
 
 
-class CardsGatewayHTTPClient(HttpClient):
+class CardsGatewayHTTPClient(HTTPClient):
     """
     Клиент для взаимодействия с /api/v1/cards сервиса http-gateway.
     """

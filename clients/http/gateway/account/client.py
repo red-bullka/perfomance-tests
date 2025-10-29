@@ -1,7 +1,7 @@
 from locust.env import Environment
 from httpx import Response, QueryParams
 
-from clients.http.client import HttpClient, HttpClientExtensions
+from clients.http.client import HTTPClient, HTTPClientExtensions
 from clients.http.gateway.client import (
     build_gateway_http_client,
     build_gateway_locust_http_client
@@ -20,7 +20,7 @@ from clients.http.gateway.account.schema import (
 )
 
 
-class AccountsGatewayHTTPClient(HttpClient):
+class AccountsGatewayHTTPClient(HTTPClient):
     """
     Клиент для взаимодействия с /api/v1/accounts сервиса http-gateway.
     """
@@ -35,7 +35,7 @@ class AccountsGatewayHTTPClient(HttpClient):
         return self.get(
             "/api/v1/accounts",
             params=QueryParams(**query.model_dump(by_alias=True)),
-            extensions=HttpClientExtensions(route='/api/v1/accounts')
+            extensions=HTTPClientExtensions(route='/api/v1/accounts')
         )
 
     def open_deposit_account_api(self, request: OpenDepositAccountRequestSchema) -> Response:

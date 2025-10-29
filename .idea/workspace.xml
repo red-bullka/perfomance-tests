@@ -6,10 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="4935ba9b-a91b-4fb5-a76f-a574d16667d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/http/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/http/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/http/event_hooks/locust_event_hook.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/http/event_hooks/locust_event_hook.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clients/http/gateway/account/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/http/gateway/account/client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clients/http/gateway/cards/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/http/gateway/cards/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/http/gateway/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/http/gateway/client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clients/http/gateway/documents/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/http/gateway/documents/client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clients/http/gateway/operations/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/http/gateway/operations/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/http/gateway/users/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/http/gateway/users/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locust_get_user_scenario.py" beforeDir="false" afterPath="$PROJECT_DIR$/locust_get_user_scenario.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,46 +40,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JavaScript Debug.Locust_2025-10-28-15h24_locust_open_debit_card_account.py_http___localhost_8003_.html.executor": "Run",
-    "Python.api_client_get_document.executor": "Run",
-    "Python.api_client_get_user.executor": "Run",
-    "Python.api_client_issue_physical_card.executor": "Run",
-    "Python.api_client_make_top_up_operation.executor": "Run",
-    "Python.client.executor": "Run",
-    "Python.fakers.executor": "Run",
-    "Python.file.executor": "Run",
-    "Python.grpc_api_client_get_documents.executor": "Run",
-    "Python.grpc_api_client_get_user.executor": "Run",
-    "Python.grpc_api_client_issue_physical_card.executor": "Run",
-    "Python.grpc_api_client_make_top_up_operation.executor": "Run",
-    "Python.grpcio_get_documents.executor": "Run",
-    "Python.grpcio_get_operation_receipt.executor": "Run",
-    "Python.grpcio_get_user.executor": "Run",
-    "Python.grpcio_issue_physical_card.executor": "Run",
-    "Python.grpcio_make_purchase_operation.executor": "Run",
-    "Python.grpcio_open_debit_card_account.executor": "Run",
-    "Python.httpx_client.executor": "Run",
-    "Python.httpx_get_operation_receipt.executor": "Run",
-    "Python.locust_basic_scenario.executor": "Run",
-    "Python.locust_event_hook.executor": "Run",
-    "Python.primer.executor": "Run",
-    "Python.pydantic_basics.executor": "Run",
-    "Python.pydantic_create_user.executor": "Run",
-    "Python.pydantic_example.executor": "Run",
-    "Python.schema.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Sasha/PycharmProjects/performance-tests/reports",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.Locust_2025-10-28-15h24_locust_open_debit_card_account.py_http___localhost_8003_.html.executor&quot;: &quot;Run&quot;,
+    &quot;Python.api_client_get_document.executor&quot;: &quot;Run&quot;,
+    &quot;Python.api_client_get_user.executor&quot;: &quot;Run&quot;,
+    &quot;Python.api_client_issue_physical_card.executor&quot;: &quot;Run&quot;,
+    &quot;Python.api_client_make_top_up_operation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.client.executor&quot;: &quot;Run&quot;,
+    &quot;Python.fakers.executor&quot;: &quot;Run&quot;,
+    &quot;Python.file.executor&quot;: &quot;Run&quot;,
+    &quot;Python.grpc_api_client_get_documents.executor&quot;: &quot;Run&quot;,
+    &quot;Python.grpc_api_client_get_user.executor&quot;: &quot;Run&quot;,
+    &quot;Python.grpc_api_client_issue_physical_card.executor&quot;: &quot;Run&quot;,
+    &quot;Python.grpc_api_client_make_top_up_operation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.grpcio_get_documents.executor&quot;: &quot;Run&quot;,
+    &quot;Python.grpcio_get_operation_receipt.executor&quot;: &quot;Run&quot;,
+    &quot;Python.grpcio_get_user.executor&quot;: &quot;Run&quot;,
+    &quot;Python.grpcio_issue_physical_card.executor&quot;: &quot;Run&quot;,
+    &quot;Python.grpcio_make_purchase_operation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.grpcio_open_debit_card_account.executor&quot;: &quot;Run&quot;,
+    &quot;Python.httpx_client.executor&quot;: &quot;Run&quot;,
+    &quot;Python.httpx_get_operation_receipt.executor&quot;: &quot;Run&quot;,
+    &quot;Python.locust_basic_scenario.executor&quot;: &quot;Run&quot;,
+    &quot;Python.locust_event_hook.executor&quot;: &quot;Run&quot;,
+    &quot;Python.primer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pydantic_basics.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pydantic_create_user.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pydantic_example.executor&quot;: &quot;Run&quot;,
+    &quot;Python.schema.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sasha/PycharmProjects/performance-tests/reports&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Sasha\PycharmProjects\performance-tests\reports" />
@@ -107,7 +112,8 @@
       <workItem from="1761199631792" duration="21604000" />
       <workItem from="1761288063545" duration="10012000" />
       <workItem from="1761546853934" duration="17116000" />
-      <workItem from="1761635939264" duration="19246000" />
+      <workItem from="1761635939264" duration="19786000" />
+      <workItem from="1761718835789" duration="8221000" />
     </task>
     <servers />
   </component>
