@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4935ba9b-a91b-4fb5-a76f-a574d16667d4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/reports/Locust_2025-10-30-11h18_locust_open_debit_card_account.py_localhost.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clients/grpc/interceptors/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clients/grpc/interceptors/locust_interceptor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpcio_interceptors.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locust_open_debit_card_account.py" beforeDir="false" afterPath="$PROJECT_DIR$/locust_open_debit_card_account.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/grpc/gateway/accounts/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/grpc/gateway/accounts/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/grpc/gateway/cards/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/grpc/gateway/cards/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/grpc/gateway/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/grpc/gateway/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/grpc/gateway/operations/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/grpc/gateway/operations/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/grpc/gateway/users/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/grpc/gateway/users/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/http/gateway/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/clients/http/gateway/client.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +86,7 @@
       <recent name="C:\Users\Sasha\PycharmProjects\performance-tests" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sasha\PycharmProjects\performance-tests\clients\grpc" />
       <recent name="C:\Users\Sasha\PycharmProjects\performance-tests" />
     </key>
   </component>
@@ -107,7 +115,7 @@
       <workItem from="1761546853934" duration="17116000" />
       <workItem from="1761635939264" duration="19786000" />
       <workItem from="1761718835789" duration="9848000" />
-      <workItem from="1761804549215" duration="877000" />
+      <workItem from="1761804549215" duration="9541000" />
     </task>
     <servers />
   </component>

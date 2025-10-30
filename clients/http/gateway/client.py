@@ -41,7 +41,7 @@ def build_gateway_locust_http_client(environment: Environment) -> Client:
         timeout=100,
         base_url="http://localhost:8003",
         event_hooks={
-            "request": [locust_request_event_hook],  # Отмечаем время начала запроса
-            "response": [locust_response_event_hook(environment)]  # Собираем метрики и передаём их в Locust
+            "request": [locust_request_event_hook],
+            "response": [locust_response_event_hook(environment)]
         }
     )
